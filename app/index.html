@@ -15,16 +15,9 @@
     <link href="css/custom.min.css" rel="stylesheet">
 
     <!-- /Global CSS -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-		    $("#sidebar_menu").load("sidebar.html");
-		    //$("#sidebar_menu") = "Test";
-		    alert($("#sidebar_menu"));
-		});
+    
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 
-		//$("#sidebar_menu").load("../components/sidebar/sidebar.html");
-	</script>
 
 
     <title>PSG340B Dashboard | </title>
@@ -58,5 +51,15 @@
           </div>
     	</div>
 
+
+		<script>
+			$(document).ready(function(){
+			    $("#sidebar_menu").load("sidebar.html");
+			    //$("#sidebar_menu") = "Test";
+			    alert($("#sidebar_menu"));
+			});
+			    $("#sidebar_menu").load("sidebar.html");
+			//$("#sidebar_menu").load("../components/sidebar/sidebar.html");
+		</script>
       </body>
 </html>

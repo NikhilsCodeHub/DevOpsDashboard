@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	    <title>PSG340B Dashboard | </title>
+  	    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+    
+  <body>
+
+      <input type="button" id="btn1" onclick="clicked();" />
+    
+  	<div id="sidebar_menu"> Weather</div>
+
+		<script lang="javascript">
+//			$(document).ready(function(){
+//			    $("#sidebar_menu").load("test2.html");
+//			    //$("#sidebar_menu") = "Test";
+//			    alert($("#sidebar_menu"));
+//			});
+			 
+            function clicked()
+            {
+                alert("i was clicked");
+                $("#sidebar_menu").load("test2.html");
+                
+            }
+			//$("#sidebar_menu").load("../components/sidebar/sidebar.html");
+		</script>
+      </body>
+</html>  	    

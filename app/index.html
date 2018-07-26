@@ -16,8 +16,8 @@
 
     <!-- /Global CSS -->
     
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
 
 
     <title>PSG340B Dashboard | </title>
@@ -38,7 +38,7 @@
 			<!-- /menu footer buttons -->
 			<div id="menu_footer">
 			</div>
-
+            <input type="button" id="btn1" onclick="clicked();"  />
 			<!-- /menu footer buttons -->
 	          </div>
 	        </div>
@@ -53,12 +53,18 @@
 
 
 		<script>
+            function clicked()
+            {
+                alert("i was clicked");
+                $("#sidebar_menu").load("../components/sidebar/sidebar.html");
+                
+            }            
 			$(document).ready(function(){
 			    $("#sidebar_menu").load("sidebar.html");
 			    //$("#sidebar_menu") = "Test";
-			    alert($("#sidebar_menu"));
+			    //alert($("#sidebar_menu"));
 			});
-			    $("#sidebar_menu").load("sidebar.html");
+			    //$("#sidebar_menu").load("sidebar.html");
 			//$("#sidebar_menu").load("../components/sidebar/sidebar.html");
 		</script>
       </body>

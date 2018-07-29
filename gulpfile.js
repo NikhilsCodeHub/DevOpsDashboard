@@ -13,7 +13,11 @@ gulp.task('browser-sync', function() {
             baseDir: './'
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
         startPath: 'app/index.html'
+=======
+        startPath: './app/index.html'
+>>>>>>> 3ad0f6d56c12bd20e881b07866c67bb927104280
 =======
         startPath: './app/index.html'
 >>>>>>> 3ad0f6d56c12bd20e881b07866c67bb927104280

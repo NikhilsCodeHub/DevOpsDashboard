@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-    // concat = require('gulp-concat'),
-    // uglify = require('gulp-uglify'),
-    // rename = require('gulp-rename'),
-    // sass = require('gulp-ruby-sass'),
-    // autoprefixer = require('gulp-autoprefixer'),
-  var browserSync = require('browser-sync').create();
+var gulp = require('gulp'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    sass = require('gulp-ruby-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    browserSync = require('browser-sync').create();
 
 
 gulp.task('browser-sync', function() {
@@ -12,7 +12,11 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: './'
         },
-        startPath: '/app/index.html'
+<<<<<<< HEAD
+        startPath: 'app/index.html'
+=======
+        startPath: './app/index.html'
+>>>>>>> 3ad0f6d56c12bd20e881b07866c67bb927104280
     });
 });
 

@@ -24,7 +24,7 @@
 			"file": "app/index.html",
 			"settings":
 			{
-				"buffer_size": 2048,
+				"buffer_size": 2094,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -68,7 +68,7 @@
 			"file": "components/sidebar/sidebar.html",
 			"settings":
 			{
-				"buffer_size": 7304,
+				"buffer_size": 7303,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -187,15 +187,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2048,
+						"buffer_size": 2094,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								624,
-								624
+								928,
+								928
 							]
 						],
 						"settings":
@@ -333,7 +333,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7304,
+						"buffer_size": 7303,
 						"regions":
 						{
 						},

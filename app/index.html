@@ -8,20 +8,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Global CSS -->
-
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>    
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">      
-    <!-- Custom Theme Style -->
-    <link href="css/custom.min.css" rel="stylesheet">
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate -->
+    <link href="/vendors/animate.css/animate.css" rel="stylesheet">    
+    <!-- Custom styling plus plugins -->
+    <link href="./css/custom.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
 
     <!-- /Global CSS -->
     
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
+    <!-- jQuery -->
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/vendors/nprogress/nprogress.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- Moment -->
+    <script src="/vendors/moment/min/moment.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="/app/js/helpers/custom.js"></script>
+    
+    <!-- Custom Theme Scripts -->
+
 
 
     <title>PSG340B Dashboard | </title>
@@ -42,11 +61,12 @@
 			<!-- /menu footer buttons -->
 			<div id="menu_footer">
 			</div>
-            <input type="button" id="btn1" onclick="clicked();"  />
+            
 			<!-- /menu footer buttons -->
 	          </div>
 	        </div>
 			<!-- page content -->
+			<div>Hello</div>
 			<!-- /page content -->
 
 			<!-- footer content -->
@@ -56,36 +76,54 @@
     	</div>
 
 
-		<script>
-            function clicked()
-            {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                //alert("i was clicked");
-                $("#sidebar_menu").load("../components/sidebar/sidebar.html");
-                
-            }            
+		<script>            
 			$(document).ready(function(){ 
-			    $("#sidebar_menu").load("../components/sidebar/sidebar.html")
+			    $("#sidebar_menu").load("../components/sidebar/sidebar.html");
+			    
+
 			    //$("#sidebar_menu") = "Test";
 			    //alert($("#sidebar_menu"));
-=======
-                alert("i was clicked");
+                //alert("i was clicked");
 //                $("#sidebar_menu").load("../components/sidebar/sidebar.html");
-                
-            }            
-			$(document).ready(function(){
-			    $("#sidebar_menu").load("../components/sidebar/sidebar.html");
->>>>>>> 3ad0f6d56c12bd20e881b07866c67bb927104280
-=======
-                alert("i was clicked");
-//                $("#sidebar_menu").load("../components/sidebar/sidebar.html");
-                
-            }            
-			$(document).ready(function(){
-			    $("#sidebar_menu").load("../components/sidebar/sidebar.html");
->>>>>>> 3ad0f6d56c12bd20e881b07866c67bb927104280
-			});
+
+                // init_sparklines();
+				//init_flot_chart();
+				//init_sidebar();
+				// init_wysiwyg();
+				// init_InputMask();
+				// init_JQVmap();
+				// init_cropper();
+				// init_knob();
+				// init_IonRangeSlider();
+				// init_ColorPicker();
+				// init_TagsInput();
+				// init_parsley();
+				// init_daterangepicker();
+				// init_daterangepicker_right();
+				// init_daterangepicker_single_call();
+				// init_daterangepicker_reservation();
+				// init_SmartWizard();
+				// init_EasyPieChart();
+				// init_charts();
+				// init_echarts();
+				// init_morris_charts();
+				// init_skycons();
+				// init_select2();
+				// init_validator();
+				// init_DataTables();
+				// init_chart_doughnut();
+				// init_gauge();
+				// init_PNotify();
+				// init_starrr();
+				// init_calendar();
+				// init_compose();
+				// init_CustomNotification();
+				// init_autosize();
+				// init_autocomplete();
+            });
 		</script>
+
+
+
       </body>
 </html>

@@ -36,8 +36,6 @@
     <script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- Moment -->
     <script src="/vendors/moment/min/moment.min.js"></script>
-    <!-- Custom Theme Scripts -->
-    <script src="/app/js/helpers/custom.js"></script>
     
     <!-- Custom Theme Scripts -->
 
@@ -54,32 +52,57 @@
 	              	<span>Ops Dashboard</span>
 	              </a>
 	            </div>
-            <!-- sidebar menu -->
-            <div id="sidebar_menu">
-			</div>
-			<!-- /sidebar menu -->
-			<!-- /menu footer buttons -->
-			<div id="menu_footer">
-			</div>
-            
-			<!-- /menu footer buttons -->
-	          </div>
-	        </div>
-			<!-- page content -->
-			<div>Hello</div>
-			<!-- /page content -->
+	            <!-- sidebar menu -->
+	            <div id="sidebar_menu">
+				</div>
+				<!-- /sidebar menu -->
 
-			<!-- footer content -->
-
-			<!-- /footer content -->
+				<!-- /menu footer buttons -->
+				<div id="menu_footer">
+				</div>
+	            
+				<!-- /menu footer buttons -->
           </div>
     	</div>
 
+	        <!-- top navigation -->
+	        <div class="top_nav">
+	          <div class="nav_menu">
+	            <nav>
+	              <div class="nav toggle">
+	                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+	              </div>
+	            </nav>
+	          </div>
+	        </div>
+	        <!-- /top navigation -->
+
+			<!-- page content -->
+	        <div class="right_col" role="main">
+	          <div class="">
+
+	          </div>
+	        </div>
+			<!-- /page content -->
+
+	        <!-- footer content -->
+	        <footer>
+	          <div class="pull-right">
+	            Bootstrap Admin Template by <a href="ABCD">ABCD</a>
+	          </div>
+	          <div class="clearfix"></div>
+	        </footer>
+	        <!-- /footer content -->
+		</div>
+	</div>
+
+    <!-- Custom Theme Scripts -->
+    <script src="/app/js/custom.js"></script>
 
 		<script>            
 			$(document).ready(function(){ 
 			    $("#sidebar_menu").load("../components/sidebar/sidebar.html");
-			    
+			    $( "li").css( "border", "3px solid red" );
 
 			    //$("#sidebar_menu") = "Test";
 			    //alert($("#sidebar_menu"));

@@ -49,7 +49,7 @@
 	          <div class="left_col scroll-view">
 	            <div class="navbar nav_title" style="border: 0;">
 	              <a href="index.html" class="site_title">
-	              	<span>Ops Dashboard</span>
+	              	<span> 340B Solutions</span>
 	              </a>
 	            </div>
 	            <!-- sidebar menu -->
@@ -57,7 +57,7 @@
 				</div>
 				<!-- /sidebar menu -->
 
-				<!-- /menu footer buttons -->
+				<!-- menu footer buttons -->
 				<div id="menu_footer">
 				</div>
 	            
@@ -66,15 +66,9 @@
     	</div>
 
 	        <!-- top navigation -->
-	        <div class="top_nav">
-	          <div class="nav_menu">
-	            <nav>
-	              <div class="nav toggle">
-	                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-	              </div>
-	            </nav>
-	          </div>
-	        </div>
+	        <div id="top-nav">
+
+	    	</div>
 	        <!-- /top navigation -->
 
 			<!-- page content -->
@@ -96,13 +90,15 @@
 		</div>
 	</div>
 
-    <!-- Custom Theme Scripts -->
-    <script src="/app/js/custom.js"></script>
 
-		<script>            
+		<script>    
+
+
+
+
 			$(document).ready(function(){ 
 			    $("#sidebar_menu").load("../components/sidebar/sidebar.html");
-			    $( "li").css( "border", "3px solid red" );
+			    $("#top-nav").load("../components/topnavigation/topnav.html");
 
 			    //$("#sidebar_menu") = "Test";
 			    //alert($("#sidebar_menu"));

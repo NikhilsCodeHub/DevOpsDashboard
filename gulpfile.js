@@ -20,6 +20,7 @@ gulp.task('watch', function() {
   // Watch .html files
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('components/sidebar/*.html', browserSync.reload);
+  gulp.watch('components/topnavigation/*.html', browserSync.reload);
   // Watch .js files
   gulp.watch('app/js/*.js', ['scripts']);
 });

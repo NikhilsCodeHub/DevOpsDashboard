@@ -151,8 +151,8 @@
               $SIDEBAR_MENU.find('li ul').parent().on('click', function(ev) {
 
                 var $li = $(this);
-
-                $li.find('ul:first-of-type').slideDown();
+                console.log('clicked - sidebar_menu');
+                //$li.find('ul:first-of-type').slideDown();
                 //alert($(this).html());
                 //$SIDEBAR_MENU.find('li ul').slideDown();
 
@@ -163,6 +163,13 @@
                 }
                 else
                 {
+                    $li.parent().find( "li" ).removeClass( "active active-sm" );
+                    $li.parent().find( "li ul" ).slideUp();
+                    // if ($SIDEBAR_MENU.find('li ul').parent().is('.active'))
+                    // {
+                    //   $SIDEBAR_MENU.find('li ul').parent().removeClass('active active-sm');
+                    //   $SIDEBAR_MENU.find('li ul').parent().slideUp();
+                    // }
                     $li.addClass('active');
                     $li.find('ul:first-of-type').slideDown();  
 

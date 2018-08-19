@@ -29,7 +29,7 @@
 	</head>
 
     <!-- jQuery -->
-    <script src="/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- Bootstrap -->
     <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
@@ -134,7 +134,7 @@
 	                            <span class="step_no">1</span>
 	                            <span class="step_descr">
 	                                              Step 1<br />
-	                                              <small>Step 1 description</small>
+	                                              <small>Select Location & Supplier</small>
 	                                          </span>
 	                          </a>
 	                        </li>
@@ -143,7 +143,7 @@
 	                            <span class="step_no">2</span>
 	                            <span class="step_descr">
 	                                              Step 2<br />
-	                                              <small>Step 2 description</small>
+	                                              <small>Select Medication</small>
 	                                          </span>
 	                          </a>
 	                        </li>
@@ -152,7 +152,7 @@
 	                            <span class="step_no">3</span>
 	                            <span class="step_descr">
 	                                              Step 3<br />
-	                                              <small>Step 3 description</small>
+	                                              <small>Split Order</small>
 	                                          </span>
 	                          </a>
 	                        </li>
@@ -161,7 +161,7 @@
 	                            <span class="step_no">4</span>
 	                            <span class="step_descr">
 	                                              Step 4<br />
-	                                              <small>Step 4 description</small>
+	                                              <small>Confirmation</small>
 	                                          </span>
 	                          </a>
 	                        </li>
@@ -233,7 +233,7 @@
 	                       
 	                      <div id="step-2">
 
-<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Table design <small>Custom design</small></h2>
@@ -259,30 +259,6 @@
 
                     <p>Add class <code>bulk_action</code> to table for bulk actions options on row select</p>
 
-                    <div class="table-responsive">
-                    	
-	                        <table id="example" class="jambo_table display" width="100%">
-	                        	<thead>
-	                        		<tr class="headings">
-	                        			<th class="column-title">Order History</th>
-	                        			<th class="column-title">Qty</th>
-	                        			<th>Item Number</th>
-	                        			<th>NDC</th>
-	                        			<th>Description</th>
-	                        			<th>Purchase Point</th>
-	                        			<th>WAC</th>
-	                        			<th>340B</th>
-	                        			<th>GPO</th>
-	                        			<th>340B Purchase Units Available</th>
-	                        			<th>GPO Purchase Units Available</th>
-	                        			<th>Is MPB</th>
-	                        			<th>EDI Orderable</th>
-	                        		</tr>
-	                        	</thead>
-	                        </table>
-                    </div>
-							
-						
                   </div>
                 </div>
               </div>
@@ -308,6 +284,30 @@
 							                    </ul>
 							                    <div class="clearfix"></div>
 							                  </div>
+
+                    <div class="table-responsive">
+                    	
+	                        <table id="example" class="jambo_table display" width="100%">
+	                        	<thead>
+	                        		<tr class="headings">
+	                        			<th class="column-title">Order History</th>
+	                        			<th class="column-title">Qty</th>
+	                        			<th>Item Number</th>
+	                        			<th>NDC</th>
+	                        			<th>Description</th>
+	                        			<th>Purchase Point</th>
+	                        			<th>WAC</th>
+	                        			<th>340B</th>
+	                        			<th>GPO</th>
+	                        			<th>340B Purchase Units Available</th>
+	                        			<th>GPO Purchase Units Available</th>
+	                        			<th>Is MPB</th>
+	                        			<th>EDI Orderable</th>
+	                        		</tr>
+	                        	</thead>
+	                        </table>
+                    </div>		</br>				
+                    <div class="clearfix"></div>	                  
 							                  <div class="x_content">
 							                    <p class="text-muted font-13 m-b-30">
 							                      DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function: <code>$().DataTable();</code>
@@ -1043,7 +1043,7 @@
 			});
 
 		var dataSet = [
-		    [ 0, "12", "1146174", "00573017920", "ADVIL CHILD JR CHEW GRAPE 24 BOTTLE 1 X 24.000 EACH", "24.00","$0.00","$0.00","$0.14","20","5","N","No" ],
+		    [ 0, "12", "1146174", "00573017920", "ADVIL CHILD GRAPE 24 BOTTLE", "24.00","$0.00","$0.00","$0.14","20","5","N","No" ],
 		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
 		    [ 1, "1", "1381128", "00138112850", " LIQGEL 200MG 20 BOTTLE", "4.00","$0.00","$0.00","$0.14","3","15","N","No" ],
 		    [ 1, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],

@@ -87,8 +87,8 @@ var setContentHeight = function () {
             {
 				if ( $BODY.is( ".nav-sm" ) )
 				{
-					$SIDEBAR_MENU.find( "li" ).removeClass( "active active-sm" );
-					$SIDEBAR_MENU.find( "li ul" ).slideUp();
+					$li.parent().find( "li" ).removeClass( "active active-sm" );
+					$li.parent().find( "li ul" ).slideUp();
 				}
 			}
             $li.addClass('active');
@@ -4257,9 +4257,7 @@ if (typeof NProgress != 'undefined') {
 				}]
 			  });
 
-			} 
-			  
-            var dataStyle = {
+			  var dataStyle = {
 				normal: {
 				  label: {
 					show: false
@@ -4284,24 +4282,26 @@ if (typeof NProgress != 'undefined') {
 				  color: 'rgba(0,0,0,0)'
 				}
 			  };
+
+			} 
+			  
 			   //echart Mini Pie
 			  
-			if ($('#echart_mini_pie2').length ){ 
+			if ($('#echart_mini_pie').length ){ 
 			  
-//			  var echartMiniPie = echarts.init(document.getElementById('echart_mini_pie2'), theme);
-			  echartMiniPie = echarts.init(document.getElementById('echart_mini_pie2'), theme);
-                
+			  var echartMiniPie = echarts.init(document.getElementById('echart_mini_pie'), theme);
+
 			  echartMiniPie .setOption({
 				title: {
-				  text: '',
-				  subtext: '',
-				  sublink: '',
+				  text: 'Chart #2',
+				  subtext: 'From ExcelHome',
+				  sublink: 'http://e.weibo.com/1341556070/AhQXtjbqh',
 				  x: 'center',
 				  y: 'center',
 				  itemGap: 20,
 				  textStyle: {
 					color: 'rgba(30,144,255,0.8)',
-					fontFamily: 'Arial',
+					fontFamily: '微软雅黑',
 					fontSize: 35,
 					fontWeight: 'bolder'
 				  }
@@ -4312,10 +4312,10 @@ if (typeof NProgress != 'undefined') {
 				},
 				legend: {
 				  orient: 'vertical',
-				  x: 300,
-				  y: 20,
+				  x: 170,
+				  y: 45,
 				  itemGap: 12,
-				  data: ['68% C-Drive', '29% D-Drive', '3% E-Drive'],
+				  data: ['68%Something #1', '29%Something #2', '3%Something #3'],
 				},
 				toolbox: {
 				  show: true,
@@ -4350,10 +4350,10 @@ if (typeof NProgress != 'undefined') {
 				  radius: [105, 130],
 				  itemStyle: dataStyle,
 				  data: [{
-					value: 90,
-					name: '68% C-Drive'
+					value: 68,
+					name: '68%Something #1'
 				  }, {
-					value: 10,
+					value: 32,
 					name: 'invisible',
 					itemStyle: placeHolderStyle
 				  }]
@@ -4361,30 +4361,27 @@ if (typeof NProgress != 'undefined') {
 				  name: '2',
 				  type: 'pie',
 				  clockWise: false,
-				  radius: [80, 100],
+				  radius: [80, 105],
 				  itemStyle: dataStyle,
 				  data: [{
-					value: 40,
+					value: 29,
+					name: '29%Something #2'
+				  }, {
+					value: 71,
 					name: 'invisible',
 					itemStyle: placeHolderStyle
-				  }, {
-					value: 30,
-					name: '30% D-Drive'
-				  }, {
-					value: 29,
-					name: '30% F-Drive'
-				  },]
+				  }]
 				}, {
 				  name: '3',
 				  type: 'pie',
 				  clockWise: false,
-				  radius: [30, 70],
+				  radius: [25, 80],
 				  itemStyle: dataStyle,
 				  data: [{
-					value: 40,
-					name: '3% E-Drive'
+					value: 3,
+					name: '3%Something #3'
 				  }, {
-					value: 60,
+					value: 97,
 					name: 'invisible',
 					itemStyle: placeHolderStyle
 				  }]
@@ -5006,7 +5003,6 @@ if (typeof NProgress != 'undefined') {
 	   
 		}  
 	   
-var echartMiniPie;
 	   
 	$(document).ready(function() {
 				

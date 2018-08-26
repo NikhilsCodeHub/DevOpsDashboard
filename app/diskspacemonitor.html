@@ -28,7 +28,7 @@
 	</head>
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
@@ -39,7 +39,8 @@
     <script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- Moment -->
     <script src="/vendors/moment/min/moment.min.js"></script>
-
+    <!-- Chart.js -->
+    <script src="/vendors/Chart.js/dist/Chart.min.js"></script>
     <!-- Custom Theme Scripts -->
 
 
@@ -79,7 +80,7 @@
 	          <div class="">
 	            <div class="page-title">
 	              <div class="title_left">
-	                <h3>Chart Js <small>Some examples to get you started</small></h3>
+	                <h3>Disk Space Monitoring <small>Server Drives</small></h3>
 	              </div>
 
 	              <div class="title_right">
@@ -98,10 +99,10 @@
 
 	            <div class="row">
 
-              <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Radar Chart <small>Sessions</small></h2>
+                    <span>Database Servers</span>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -143,71 +144,73 @@
 
 		<script>    
 
-	   /* SMART WIZARD */
-		
-		function init_SmartWizard() {
+	   
+		function init_charts() {
 			
-			if( typeof ($.fn.smartWizard) === 'undefined'){ return; }
-			console.log('init_SmartWizard');
+				console.log('run_charts  typeof [' + typeof (Chart) + ']');
 			
-			$('#wizard').smartWizard();
-
-			$('#wizard_verticle').smartWizard({
-			  transitionEffect: 'slide'
-			});
-
-			$('.buttonNext').addClass('btn btn-success').on('click', function(){ 
-						//alert('Next button click');
-						form.submit();});
-			$('.buttonPrevious').addClass('btn btn-primary');
-			$('.buttonFinish').addClass('btn btn-default');
+				if( typeof (Chart) === 'undefined'){ return; }
+				
+				console.log('init_charts');
 			
-		};
+				
+				Chart.defaults.global.legend = {
+					enabled: false
+				};
 
-			$('.btn-group .btn').on('click', function() { // On the click event for each button
-			  $(this) // get the button being clicked
-			    .addClass('btn-primary') // add the `btn-primary` class
-			    .siblings('.btn-primary') // get all sibling buttons which may already be selected
-			    .addClass('btn-default')
-			    .removeClass('btn-primary'); // remove the selected class
-			});
+				  // Radar chart
+				  
+				if ($('#canvasRadar').length ){ 
+				  
+				  var ctx = document.getElementById("canvasRadar");
+				  var data = {
+					labels: ["C-Drive", "D-Drive", "E-Drive", "F-Drive", "G-Drive", "H-Drive", "I-Drive"],
+					datasets: [{
+					  label: "HSS-PROD-DB01",
+					  backgroundColor: "rgba(3, 88, 106, 0.2)",
+					  borderColor: "rgba(3, 88, 106, 0.80)",
+					  pointBorderColor: "rgba(3, 88, 106, 0.80)",
+					  pointBackgroundColor: "rgba(3, 88, 106, 0.80)",
+					  pointHoverBackgroundColor: "#fff",
+					  pointHoverBorderColor: "rgba(220,220,220,1)",
+					  data: [65, 59, 90, 81, 0, 55, 40]
+					}, {
+					  label: "HSS-PROD-DB02",
+					  backgroundColor: "rgba(38, 185, 154, 0.2)",
+					  borderColor: "rgba(38, 185, 154, 0.85)",
+					  pointColor: "rgba(38, 185, 154, 0.85)",
+					  pointStrokeColor: "#fff",
+					  pointHighlightFill: "#fff",
+					  pointHighlightStroke: "rgba(151,187,205,1)",
+					  data: [28, 48, 40, 19, 96, 27, 100]
+					},
+					{
+					  label: "HSS-PROD-DB03",
+					  backgroundColor: "rgba(45, 085, 154, 0.2)",
+					  borderColor: "rgba(38, 185, 154, 0.85)",
+					  pointColor: "rgba(38, 185, 154, 0.85)",
+					  pointStrokeColor: "#fff",
+					  pointHighlightFill: "#fff",
+					  pointHighlightStroke: "rgba(151,187,205,1)",
+					  data: [10, 68, 60, 80, 96, 0, 90]
+					}]
+				  };
 
-		var dataSet = [
-		    [ 0, "12", "1146174", "00573017920", "ADVIL CHILD GRAPE 24 BOTTLE", "24.00","$0.00","$0.00","$0.14","20","5","N","No" ],
-		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
-		    [ 1, "1", "1381128", "00138112850", " LIQGEL 200MG 20 BOTTLE", "4.00","$0.00","$0.00","$0.14","3","15","N","No" ],
-		    [ 1, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
-		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
-		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ]
-		    ];
-		 
-		$(document).ready(function() {
-		    $('#example').DataTable( {
-		        data: dataSet		       
-		    } );
-		} );
+				  var canvasRadar = new Chart(ctx, {
+					type: 'radar',
+					data: data
+
+				  });
+				
+				}
+
+			}
+
 
 			$(document).ready(function(){ 
 			    $("#sidebar_menu").load("../components/sidebar/sidebar.html");
 			    $("#top-nav").load("../components/topnavigation/topnav.html");
-			    //$('#example').DataTable();
-			    //$('datatable-checkbox').DataTable();
-			    init_SmartWizard();
 
-
-				var $datatable = $('#datatable-checkbox');
-
-				$datatable.dataTable({
-				  'order': [[ 1, 'asc' ]],
-				  'columnDefs': [
-					{ orderable: false, targets: [0] }
-				  ]
-				});
-				$datatable.on('draw.dt', function() {
-				  $('checkbox input').iCheck({
-					checkboxClass: 'icheckbox_flat-green'
-				  });
-				});
 
 			    //$("#sidebar_menu") = "Test";
 			    //alert($("#sidebar_menu"));
@@ -232,7 +235,7 @@
 				// init_daterangepicker_reservation();
 				// init_SmartWizard();
 				// init_EasyPieChart();
-				// init_charts();
+				init_charts();
 				// init_echarts();
 				// init_morris_charts();
 				// init_skycons();

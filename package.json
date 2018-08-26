@@ -1,0 +1,33 @@
+{
+  "name": "devopsdashboard",
+  "version": "1.0.0",
+  "description": "DevOps Dashboard",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "browser-sync": "^2.24.6",
+    "chart.js": "^2.7.2",
+    "color": "^3.0.0",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikhilsCodeHub/DevOpsDashboard.git"
+  },
+  "keywords": [
+    "devops",
+    "javascript",
+    "nodejs",
+    "bootstrapjs"
+  ],
+  "author": "NikhilW",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikhilsCodeHub/DevOpsDashboard/issues"
+  },
+  "homepage": "https://github.com/NikhilsCodeHub/DevOpsDashboard#readme"
+}

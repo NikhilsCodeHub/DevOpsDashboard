@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Global CSS -->
+    <!-- Bootstrap -->
+	<!-- OLD -- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+   	<link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Font Awesome -->
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate -->
+    <link href="/vendors/animate.css/animate.css" rel="stylesheet">    
+    <!-- Custom styling plus plugins -->
+    <link href="/css/custom.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+	<!-- DataTables -->
+	<link href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+
+
+    <!-- /Global CSS -->
+    
+	</head>
+
+    <!-- Custom Theme Scripts -->    
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Bootstrap -->
+	<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>   -->
+	 
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/vendors/nprogress/nprogress.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- Chart.js -->
+    <script src="/vendors/Chart.js/dist/Chart.min.js"></script>
+
+
+
+
+    <title>PSG340B Dashboard | </title>
+	  <body class="nav-md">
+		 <div class="container body">
+	      <div class="main_container">
+	        <div class="col-md-3 left_col">
+	          <div class="left_col scroll-view">
+	            <div class="navbar nav_title" style="border: 0;">
+	              <a href="index.html" class="site_title">
+	              	<span> 340B Solutions</span>
+	              </a>
+	            </div>
+	            <!-- sidebar menu -->
+	            <div id="sidebar_menu">
+				</div>
+				<!-- /sidebar menu -->
+
+				<!-- menu footer buttons -->
+				<div id="menu_footer">
+				</div>
+	            
+				<!-- /menu footer buttons -->
+          </div>
+    	</div>
+
+	        <!-- top navigation -->
+	        <div id="top-nav">
+
+	    	</div>
+	        <!-- /top navigation -->
+
+			<!-- page content -->
+	        <div class="right_col" role="main">
+	          <div class="">
+	            <div class="page-title">
+	              <div class="title_left">
+	                <h3>Disk Space Dashboard</h3>
+	              </div>
+
+	              <div class="title_right">
+	                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+	                  <div class="input-group">
+	                    <input type="text" class="form-control" placeholder="Search for...">
+	                    <span class="input-group-btn">
+	                              <button class="btn btn-default" type="button">Go!</button>
+	                          </span>
+	                  </div>
+	                </div>
+	              </div>
+				</div>
+
+				<div class="clearfix"></div>
+
+
+
+                                                        
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2><i class="fa fa-align-left"></i> Collapsible / Accordion <small>Sessions</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <!-- start accordion -->
+                    <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel">
+                        <a class="panel-heading collapsed" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          <h4 class="panel-title">Collapsible Group Items #1</h4>
+                          
+                        </a>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body">
+
+
+				              <div class="col-md-4 col-sm-6 col-xs-12">
+				                <div class="x_panel">
+				                  <div class="x_title">
+				                    <h4>HSS-PROD-DB07 <small>File Server</small></h4>
+
+				                    <div class="clearfix"></div>
+				                  </div>
+				                  <div class="x_content">
+				                    <canvas id="polarArea1"></canvas>
+				                  </div>
+				                </div>
+				              </div>
+				              <div class="col-md-4 col-sm-6 col-xs-12">
+				                <div class="x_panel">
+				                  <div class="x_title">
+				                    <h2>Radar Chart <small>Sessions</small></h2>
+				                    <div class="clearfix"></div>
+				                  </div>
+				                  <div class="x_content">
+				                    <canvas id="canvasRadar"></canvas>
+				                  </div>
+				                </div>
+				              </div>
+
+				              <div class="col-md-4 col-sm-6 col-xs-12">
+				                <div class="x_panel">
+				                  <div class="x_title">
+				                    <h4>HSS-PROD-APP01 <small>DB Server</small></h4>
+
+				                    <div class="clearfix"></div>
+				                  </div>
+				                  <div class="x_content">
+
+									  <div class="progress" style="float:left;">
+										<div class="progress-bar progress-bar-success" role="progressbar" style="width:50%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"> </div>
+										<div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar progress-bar-danger" role="progressbar"style="width:3%"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+									  </div>
+									   <div class="progress">
+										<div class="progress-bar progress-bar-success" role="progressbar" style="width:70%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"> </div>
+										<div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar progress-bar-danger" role="progressbar"style="width:20%"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+									  </div>
+									  
+									  <div class="progress">
+										<div class="progress-bar progress-bar-success" role="progressbar" style="width:50%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"> </div>
+										<div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar progress-bar-danger" role="progressbar"style="width:3%"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+									  </div>
+									   <div class="progress">
+										<div class="progress-bar progress-bar-success" role="progressbar" style="width:70%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"> </div>
+										<div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar progress-bar-danger" role="progressbar"style="width:20%"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+									  </div>
+									  
+									  <div class="progress">
+										<div class="progress-bar progress-bar-success" role="progressbar" style="width:20%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"> </div>
+										<div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar progress-bar-danger" role="progressbar"style="width:3%"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+									  </div>
+									   <div class="progress">
+										<div class="progress-bar progress-bar-success" role="progressbar" style="width:30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"> 30</div>
+										<div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40</div>
+										<div class="progress-bar progress-bar-danger" role="progressbar"  style="width:10%">20</div>
+									  </div> 
+
+				                  </div>
+				                </div>
+				              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel">
+                        <a class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <h4 class="panel-title">Collapsible Group Items #2</h4>
+                        </a>
+                        <div id="collapseTwo" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingTwo">
+                          <div class="panel-body">
+                            <p><strong>Collapsible Item 2 data</strong>
+                            </p>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel">
+                        <a class="panel-heading collapsed" role="tab" id="headingThree" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          <h4 class="panel-title">Collapsible Group Items #3</h4>
+                        </a>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                            <p><strong>Collapsible Item 3 data</strong>
+                            </p>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end of accordion -->
+
+
+                  </div>
+                </div>
+              </div>
+			<!-- /page content -->
+
+	        <!-- footer content -->
+	        <footer>
+	          <div class="pull-right">
+	            Bootstrap Admin Template by <a href="ABCD">ABCD</a>
+	          </div>
+	          <div class="clearfix"></div>
+	        </footer>
+	        <!-- /footer content -->
+		</div>
+	</div>
+
+
+		<script>    
+
+			//alert($('#accordion div.panel a').siblings('div').length);
+			//$('#accordion div.panel').children('div').addClass('in');
+
+			 $('#accordion div.panel a').on('click',function(){
+			 	console.log('Clicked - Accordian Panel');
+			 	var $a = $(this);
+			 	//alert($a.siblings('div').is('.in'));
+			 	if ($a.siblings('div').is('.in'))
+			 	{
+			 		$a.siblings('div').slideUp();
+			 		//$a.siblings('div').removeClass('in');
+
+
+			 	}
+			 	else
+			 	{
+					$('#accordion div.panel a').siblings('div').slideUp();
+					$a.siblings('div').slideDown();
+			 	}
+
+
+
+			 });
+
+			// $('.btn-group .btn').on('click', function() { // On the click event for each button
+			//   $(this) // get the button being clicked
+			//     .addClass('btn-primary') // add the `btn-primary` class
+			//     .siblings('.btn-primary') // get all sibling buttons which may already be selected
+			//     .addClass('btn-default')
+			//     .removeClass('btn-primary'); // remove the selected class
+			// });
+
+
+			// Accordion
+/*			$(document).ready(function() {
+			    $(".expand").on("click", function () {
+			        $(this).next().slideToggle(200);
+			        $expand = $(this).find(">:first-child");
+
+			        if ($expand.text() == "+") {
+			            $expand.text("-");
+			        } else {
+			            $expand.text("+");
+			        }
+			    });
+			});
+
+*/
+
+function init_PolarAreachart() {
+			
+				console.log('run_charts  typeof [' + typeof (Chart) + ']');
+			
+				if( typeof (Chart) === 'undefined'){ return; }
+				
+				console.log('init_charts');
+			
+				
+				Chart.defaults.global.legend = {
+					enabled: false
+				};
+
+			  // PolarArea chart
+
+			if ($('#polarArea').length ){
+
+				var ctxPA1 = document.getElementById("polarArea1");
+				var ctxPA2 = document.getElementById("polarArea2");
+
+				var data = {
+				datasets: [{
+				  data: [120,50, 60, 140, 180, 100],
+				  backgroundColor: [
+					"#455C73",
+					"#9B59B6",
+					"#BDC3C7",
+					"#26B99A",
+					"#3498DB"
+				  ],
+				  label: 'My dataset'
+				}],
+				labels: [
+				  "Dark Gray",
+				  "Purple",
+				  "Gray",
+				  "Green",
+				  "Blue"
+				]
+				};
+
+				var polarArea = new Chart(ctxPA1, {
+				data: data,
+				type: 'polarArea',
+				options: {
+				  scale: {
+					ticks: {
+					  beginAtZero: true
+					}
+				  }
+				}
+				});
+			
+		
+			}
+/*
+			if ($('#polarArea').length ){
+
+				var ctx = document.getElementById("polarArea");
+				var data = {
+				datasets: [{
+				  data: [75, 50, 40, 90, 85],
+				  backgroundColor: [
+					"#455C73",
+					"#9B59B6",
+					"#BDC3C7",
+					"#26B99A",
+					"#3498DB"
+				  ],
+				  label: 'My dataset'
+				}],
+				labels: [
+				  "Dark Gray",
+				  "Purple",
+				  "Gray",
+				  "Green",
+				  "Blue"
+				]
+				};
+
+				var polarArea = new Chart(ctx, {
+				data: data,
+				type: 'polarArea',
+				options: {
+					responsive: true;
+				  scale: {
+					ticks: {
+					  beginAtZero: true
+					}
+				  },
+				  animation:{
+				  	animateRotate: false;
+				  	animateScale: true;
+				  }
+				}
+				});
+*/
+			}
+
+
+
+
+			$(document).ready(function(){ 
+			    $("#sidebar_menu").load("../components/sidebar/sidebar.html");
+			    $("#top-nav").load("../components/topnavigation/topnav.html");
+
+			    init_PolarAreachart();
+
+			    //$('#example').DataTable();
+			    //$('datatable-checkbox').DataTable();
+			    //init_SmartWizard();
+
+
+
+
+			    //$("#sidebar_menu") = "Test";
+			    //alert($("#sidebar_menu"));
+                //alert("i was clicked");
+//                $("#sidebar_menu").load("../components/sidebar/sidebar.html");
+
+                // init_sparklines();
+				//init_flot_chart();
+				//init_sidebar();
+				// init_wysiwyg();
+				// init_InputMask();
+				// init_JQVmap();
+				// init_cropper();
+				// init_knob();
+				// init_IonRangeSlider();
+				// init_ColorPicker();
+				// init_TagsInput();
+				// init_parsley();
+				// init_daterangepicker();
+				// init_daterangepicker_right();
+				// init_daterangepicker_single_call();
+				// init_daterangepicker_reservation();
+				// init_SmartWizard();
+				// init_EasyPieChart();
+				// init_charts();
+				// init_echarts();
+				// init_morris_charts();
+				// init_skycons();
+				// init_select2();
+				// init_validator();
+				// init_DataTables();
+				// init_chart_doughnut();
+				// init_gauge();
+				// init_PNotify();
+				// init_starrr();
+				// init_calendar();
+				// init_compose();
+				// init_CustomNotification();
+				// init_autosize();
+				// init_autocomplete();
+            });
+		</script>
+
+
+
+      </body>
+</html>

@@ -87,8 +87,8 @@ var setContentHeight = function () {
             {
 				if ( $BODY.is( ".nav-sm" ) )
 				{
-					$li.parent().find( "li" ).removeClass( "active active-sm" );
-					$li.parent().find( "li ul" ).slideUp();
+					$SIDEBAR_MENU.find( "li" ).removeClass( "active active-sm" );
+					$SIDEBAR_MENU.find( "li ul" ).slideUp();
 				}
 			}
             $li.addClass('active');
@@ -4257,7 +4257,9 @@ if (typeof NProgress != 'undefined') {
 				}]
 			  });
 
-			  var dataStyle = {
+			} 
+			  
+            var dataStyle = {
 				normal: {
 				  label: {
 					show: false
@@ -4282,26 +4284,24 @@ if (typeof NProgress != 'undefined') {
 				  color: 'rgba(0,0,0,0)'
 				}
 			  };
-
-			} 
-			  
 			   //echart Mini Pie
 			  
-			if ($('#echart_mini_pie').length ){ 
+			if ($('#echart_mini_pie2').length ){ 
 			  
-			  var echartMiniPie = echarts.init(document.getElementById('echart_mini_pie'), theme);
-
+//			  var echartMiniPie = echarts.init(document.getElementById('echart_mini_pie2'), theme);
+			  echartMiniPie = echarts.init(document.getElementById('echart_mini_pie2'), theme);
+                
 			  echartMiniPie .setOption({
 				title: {
-				  text: 'Chart #2',
-				  subtext: 'From ExcelHome',
-				  sublink: 'http://e.weibo.com/1341556070/AhQXtjbqh',
+				  text: '',
+				  subtext: '',
+				  sublink: '',
 				  x: 'center',
 				  y: 'center',
 				  itemGap: 20,
 				  textStyle: {
 					color: 'rgba(30,144,255,0.8)',
-					fontFamily: '微软雅黑',
+					fontFamily: 'Arial',
 					fontSize: 35,
 					fontWeight: 'bolder'
 				  }
@@ -4312,10 +4312,10 @@ if (typeof NProgress != 'undefined') {
 				},
 				legend: {
 				  orient: 'vertical',
-				  x: 170,
-				  y: 45,
+				  x: 300,
+				  y: 20,
 				  itemGap: 12,
-				  data: ['68%Something #1', '29%Something #2', '3%Something #3'],
+				  data: ['68% C-Drive', '29% D-Drive', '3% E-Drive'],
 				},
 				toolbox: {
 				  show: true,
@@ -4350,10 +4350,10 @@ if (typeof NProgress != 'undefined') {
 				  radius: [105, 130],
 				  itemStyle: dataStyle,
 				  data: [{
-					value: 68,
-					name: '68%Something #1'
+					value: 90,
+					name: '68% C-Drive'
 				  }, {
-					value: 32,
+					value: 10,
 					name: 'invisible',
 					itemStyle: placeHolderStyle
 				  }]
@@ -4361,27 +4361,30 @@ if (typeof NProgress != 'undefined') {
 				  name: '2',
 				  type: 'pie',
 				  clockWise: false,
-				  radius: [80, 105],
+				  radius: [80, 100],
 				  itemStyle: dataStyle,
 				  data: [{
-					value: 29,
-					name: '29%Something #2'
-				  }, {
-					value: 71,
+					value: 40,
 					name: 'invisible',
 					itemStyle: placeHolderStyle
-				  }]
+				  }, {
+					value: 30,
+					name: '30% D-Drive'
+				  }, {
+					value: 29,
+					name: '30% F-Drive'
+				  },]
 				}, {
 				  name: '3',
 				  type: 'pie',
 				  clockWise: false,
-				  radius: [25, 80],
+				  radius: [30, 70],
 				  itemStyle: dataStyle,
 				  data: [{
-					value: 3,
-					name: '3%Something #3'
+					value: 40,
+					name: '3% E-Drive'
 				  }, {
-					value: 97,
+					value: 60,
 					name: 'invisible',
 					itemStyle: placeHolderStyle
 				  }]
@@ -5003,43 +5006,44 @@ if (typeof NProgress != 'undefined') {
 	   
 		}  
 	   
+var echartMiniPie;
 	   
 	$(document).ready(function() {
 				
-		// init_sparklines();
-		// init_flot_chart();
-		// init_sidebar();
-		// init_wysiwyg();
-		// init_InputMask();
-		// init_JQVmap();
-		// init_cropper();
-		// init_knob();
-		// init_IonRangeSlider();
-		// init_ColorPicker();
-		// init_TagsInput();
-		// init_parsley();
-		// init_daterangepicker();
-		// init_daterangepicker_right();
-		// init_daterangepicker_single_call();
-		// init_daterangepicker_reservation();
-		// init_SmartWizard();
-		// init_EasyPieChart();
-		// init_charts();
-		// init_echarts();
-		// init_morris_charts();
-		// init_skycons();
-		// init_select2();
-		// init_validator();
-		// init_DataTables();
-		// init_chart_doughnut();
-		// init_gauge();
-		// init_PNotify();
-		// init_starrr();
-		// init_calendar();
-		// init_compose();
-		// init_CustomNotification();
-		// init_autosize();
-		// init_autocomplete();
+		init_sparklines();
+		init_flot_chart();
+		init_sidebar();
+		init_wysiwyg();
+		init_InputMask();
+		init_JQVmap();
+		init_cropper();
+		init_knob();
+		init_IonRangeSlider();
+		init_ColorPicker();
+		init_TagsInput();
+		init_parsley();
+		init_daterangepicker();
+		init_daterangepicker_right();
+		init_daterangepicker_single_call();
+		init_daterangepicker_reservation();
+		init_SmartWizard();
+		init_EasyPieChart();
+		init_charts();
+		init_echarts();
+		init_morris_charts();
+		init_skycons();
+		init_select2();
+		init_validator();
+		init_DataTables();
+		init_chart_doughnut();
+		init_gauge();
+		init_PNotify();
+		init_starrr();
+		init_calendar();
+		init_compose();
+		init_CustomNotification();
+		init_autosize();
+		init_autocomplete();
 				
 	});	
 	

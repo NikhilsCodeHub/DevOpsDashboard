@@ -9,8 +9,7 @@
 
     <!-- Global CSS -->
     <!-- Bootstrap -->
-	<!-- OLD -- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
-   	<link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
@@ -18,11 +17,10 @@
     <!-- Animate -->
     <link href="/vendors/animate.css/animate.css" rel="stylesheet">    
     <!-- Custom styling plus plugins -->
-    <link href="/css/custom.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
     <!-- bootstrap-progressbar -->
     <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-	<!-- DataTables -->
-	<link href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+
 
 
     <!-- /Global CSS -->
@@ -32,10 +30,8 @@
     <!-- Custom Theme Scripts -->    
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <!-- Bootstrap -->
-	<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>   -->
-	 
+     <script src="/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->	 
     <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
     <script src="/vendors/fastclick/lib/fastclick.js"></script>
@@ -132,10 +128,10 @@
                     <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
                       <div class="panel">
                         <a class="panel-heading collapsed" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                          <h4 class="panel-title">Collapsible Group Items #1</h4>
+                          <h4 class="panel-title">Database Servers #1</h4>
                           
                         </a>
-                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                           <div class="panel-body">
 
 
@@ -171,40 +167,43 @@
 				                    <div class="clearfix"></div>
 				                  </div>
 				                  <div class="x_content">
+									<div class="progress-group">
+										<div class="col-md-6">C
+										<div class="progress">
+										  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="42"
+										  aria-valuemin="0" aria-valuemax="100" style="width:42%">
+										    42% Complete (success)
+										  </div>
+										</div>
+										</div>
+										<div class="col-md-6">D
+										<div class="progress">
+										  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="82"
+										  aria-valuemin="0" aria-valuemax="100" style="width:82%">
+										    82% Complete (success)
+										  </div>
+										</div>
+										</div>
+										<div class="progress">
+										  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="92"
+										  aria-valuemin="0" aria-valuemax="100" style="width:92%">
+										    92% Complete (success)
+										  </div>
+										</div>
+										<div class="progress">
+										  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="52"
+										  aria-valuemin="0" aria-valuemax="100" style="width:52%">
+										    52% Complete (success)
+										  </div>
+										</div>
 
-									  <div class="progress" style="float:left;">
-										<div class="progress-bar progress-bar-success" role="progressbar" style="width:50%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"> </div>
-										<div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-										<div class="progress-bar progress-bar-danger" role="progressbar"style="width:3%"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-									  </div>
-									   <div class="progress">
-										<div class="progress-bar progress-bar-success" role="progressbar" style="width:70%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"> </div>
-										<div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-										<div class="progress-bar progress-bar-danger" role="progressbar"style="width:20%"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-									  </div>
-									  
-									  <div class="progress">
-										<div class="progress-bar progress-bar-success" role="progressbar" style="width:50%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"> </div>
-										<div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-										<div class="progress-bar progress-bar-danger" role="progressbar"style="width:3%"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-									  </div>
-									   <div class="progress">
-										<div class="progress-bar progress-bar-success" role="progressbar" style="width:70%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"> </div>
-										<div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-										<div class="progress-bar progress-bar-danger" role="progressbar"style="width:20%"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-									  </div>
-									  
-									  <div class="progress">
-										<div class="progress-bar progress-bar-success" role="progressbar" style="width:20%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"> </div>
-										<div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-										<div class="progress-bar progress-bar-danger" role="progressbar"style="width:3%"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-									  </div>
-									   <div class="progress">
-										<div class="progress-bar progress-bar-success" role="progressbar" style="width:30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"> 30</div>
-										<div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40</div>
-										<div class="progress-bar progress-bar-danger" role="progressbar"  style="width:10%">20</div>
-									  </div> 
+										<div class="progress">
 
+										</div>
+										<div class="progress">
+
+										</div> 
+									</div>
 				                  </div>
 				                </div>
 				              </div>
@@ -213,7 +212,7 @@
                       </div>
                       <div class="panel">
                         <a class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          <h4 class="panel-title">Collapsible Group Items #2</h4>
+                          <h4 class="panel-title">App Servers #2</h4>
                         </a>
                         <div id="collapseTwo" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingTwo">
                           <div class="panel-body">
@@ -225,7 +224,7 @@
                       </div>
                       <div class="panel">
                         <a class="panel-heading collapsed" role="tab" id="headingThree" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          <h4 class="panel-title">Collapsible Group Items #3</h4>
+                          <h4 class="panel-title">Dev and Test Servers #3</h4>
                         </a>
                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                           <div class="panel-body">
@@ -307,104 +306,7 @@
 
 */
 
-function init_PolarAreachart() {
-			
-				console.log('run_charts  typeof [' + typeof (Chart) + ']');
-			
-				if( typeof (Chart) === 'undefined'){ return; }
-				
-				console.log('init_charts');
-			
-				
-				Chart.defaults.global.legend = {
-					enabled: false
-				};
 
-			  // PolarArea chart
-
-			if ($('#polarArea').length ){
-
-				var ctxPA1 = document.getElementById("polarArea1");
-				var ctxPA2 = document.getElementById("polarArea2");
-
-				var data = {
-				datasets: [{
-				  data: [120,50, 60, 140, 180, 100],
-				  backgroundColor: [
-					"#455C73",
-					"#9B59B6",
-					"#BDC3C7",
-					"#26B99A",
-					"#3498DB"
-				  ],
-				  label: 'My dataset'
-				}],
-				labels: [
-				  "Dark Gray",
-				  "Purple",
-				  "Gray",
-				  "Green",
-				  "Blue"
-				]
-				};
-
-				var polarArea = new Chart(ctxPA1, {
-				data: data,
-				type: 'polarArea',
-				options: {
-				  scale: {
-					ticks: {
-					  beginAtZero: true
-					}
-				  }
-				}
-				});
-			
-		
-			}
-/*
-			if ($('#polarArea').length ){
-
-				var ctx = document.getElementById("polarArea");
-				var data = {
-				datasets: [{
-				  data: [75, 50, 40, 90, 85],
-				  backgroundColor: [
-					"#455C73",
-					"#9B59B6",
-					"#BDC3C7",
-					"#26B99A",
-					"#3498DB"
-				  ],
-				  label: 'My dataset'
-				}],
-				labels: [
-				  "Dark Gray",
-				  "Purple",
-				  "Gray",
-				  "Green",
-				  "Blue"
-				]
-				};
-
-				var polarArea = new Chart(ctx, {
-				data: data,
-				type: 'polarArea',
-				options: {
-					responsive: true;
-				  scale: {
-					ticks: {
-					  beginAtZero: true
-					}
-				  },
-				  animation:{
-				  	animateRotate: false;
-				  	animateScale: true;
-				  }
-				}
-				});
-*/
-			}
 
 
 
@@ -461,6 +363,14 @@ function init_PolarAreachart() {
 				// init_CustomNotification();
 				// init_autosize();
 				// init_autocomplete();
+
+				// == Progress-Bar colors
+				// .progress-bar-success
+				// .progress-bar-info
+				// .progress-bar-warning
+				// .progress-bar-danger
+				// .progress-bar-striped
+
             });
 		</script>
 

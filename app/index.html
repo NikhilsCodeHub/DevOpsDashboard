@@ -20,12 +20,16 @@
     <link href="./css/custom.css" rel="stylesheet">
     <!-- bootstrap-progressbar -->
     <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+	<!-- DataTables -->
+	<link href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+
 
     <!-- /Global CSS -->
     
-</head>
+	</head>
+
     <!-- jQuery -->
-    <script src="/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- Bootstrap -->
     <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
@@ -36,7 +40,10 @@
     <script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- Moment -->
     <script src="/vendors/moment/min/moment.min.js"></script>
-    
+    <!-- jQuery Smart Wizard -->
+    <script src="/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+	<!-- DataTables -->
+    <script src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <!-- Custom Theme Scripts -->
 
 
@@ -74,7 +81,242 @@
 			<!-- page content -->
 	        <div class="right_col" role="main">
 	          <div class="">
+	            <div class="page-title">
+	              <div class="title_left">
+	                <h3>Split Billing -> Create Order</h3>
+	              </div>
 
+	              <div class="title_right">
+	                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+	                  <div class="input-group">
+	                    <input type="text" class="form-control" placeholder="Search for...">
+	                    <span class="input-group-btn">
+	                              <button class="btn btn-default" type="button">Go!</button>
+	                          </span>
+	                  </div>
+	                </div>
+	              </div>
+				</div>
+
+				<div class="clearfix"></div>
+
+	            <div class="row">
+
+	              <div class="col-md-12 col-sm-12 col-xs-12">
+	                <div class="x_panel">
+	                  <div class="x_title">
+	                    <h2>Create Order  <small>Wizard</small></h2>
+	                    <ul class="nav navbar-right panel_toolbox">
+	                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+	                      </li>
+	                      <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+	                        <ul class="dropdown-menu" role="menu">
+	                          <li><a href="#">Settings 1</a>
+	                          </li>
+	                          <li><a href="#">Settings 2</a>
+	                          </li>
+	                        </ul>
+	                      </li>
+	                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+	                      </li>
+	                    </ul>
+	                    <div class="clearfix"></div>
+	                  </div>
+
+	                  <div class="x_content">
+	                    <!-- Smart Wizard -->
+	                    <p>This is a basic form wizard example that inherits the colors from the selected scheme.</p>
+	                    <div id="wizard" class="form_wizard wizard_horizontal">
+	                      <ul class="wizard_steps">
+	                        <li>
+	                          <a href="#step-1">
+	                            <span class="step_no">1</span>
+	                            <span class="step_descr">
+	                                              Step 1<br />
+	                                              <small>Select Location & Supplier</small>
+	                                          </span>
+	                          </a>
+	                        </li>
+	                        <li>
+	                          <a href="#step-2">
+	                            <span class="step_no">2</span>
+	                            <span class="step_descr">
+	                                              Step 2<br />
+	                                              <small>Select Items</small>
+	                                          </span>
+	                          </a>
+	                        </li>
+	                        <li>
+	                          <a href="#step-3">
+	                            <span class="step_no">3</span>
+	                            <span class="step_descr">
+	                                              Step 3<br />
+	                                              <small>Split Order</small>
+	                                          </span>
+	                          </a>
+	                        </li>
+	                        <li>
+	                          <a href="#step-4">
+	                            <span class="step_no">4</span>
+	                            <span class="step_descr">
+	                                              Step 4<br />
+	                                              <small>Confirmation</small>
+	                                          </span>
+	                          </a>
+	                        </li>
+	                      </ul>
+	                      <div id="step-1">
+	                        <form class="form-horizontal form-label-left input_mask">
+	                          <div class="form-group">
+	                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Pharmacy:</label>
+									<div class="col-md-3 col-sm-3 col-xs-12">
+									  <select class="form-control">
+									    <option>Choose option</option>
+									    <option>Test Pharmacy</option>
+									    <option>CVS</option>
+									    <option>University of Michigan</option>
+									    <option>Alamance Regional</option>
+									  </select>
+									</div>
+	                          </div>
+	                          <div class="form-group">
+	                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Give Your Order a Title :<span class="required">*</span>
+	                            </label>
+	                            <div class="col-md-6 col-sm-6 col-xs-12">
+	                              <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+	                            </div>
+	                          </div>
+	                          <div class="form-group">
+	                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Enter a PO Number Prefix (4 characters MAX): <span class="required">*</span>
+	                            </label>
+	                            <div class="col-md-6 col-sm-6 col-xs-12">
+	                              <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+	                            </div>
+	                          </div>
+	                          <div class="form-group">
+	                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Supplier:</label>
+									<div class="col-md-3 col-sm-3 col-xs-12">
+									  <select class="form-control">
+									    <option>Choose option</option>
+									    <option>Cardinal</option>
+									    <option>Akorn</option>
+									    <option>FFF</option>
+									    <option>McKesson</option>
+									  </select>
+									</div>
+	                          </div>
+	                          <div class="form-group">
+	                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Order Type:</label>
+	                            <div class="col-md-6 col-sm-6 col-xs-12">
+	                              <div id="gender" class="btn-group" data-toggle="buttons">
+	                                <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+	                                  <input type="radio" name="gender" value="male"> &nbsp; Manual &nbsp;
+	                                </label>
+	                                <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+	                                  <input type="radio" name="gender" value="female"/> Electronic
+	                                </label>
+	                              </div>
+	                            </div>
+	                          </div>
+	                          <div class="form-group">
+	                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Comments 
+	                            </label>
+	                            <div class="col-md-6 col-sm-6 col-xs-12">
+	                              <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text"/>
+	                            </div>
+	                          </div>
+
+	                        </form>
+
+	                      </div>
+	                       
+	                      <div id="step-2">
+
+							<div class="col-md-12 col-sm-12 col-xs-12">
+							                <div class="x_panel">
+							                  <div class="x_title">
+							                    <h2>Item Search</h2>
+							                    <ul class="nav navbar-right panel_toolbox">
+							                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+							                      </li>
+							                      <li class="dropdown">
+							                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+							                        <ul class="dropdown-menu" role="menu">
+							                          <li><a href="#">Settings 1</a>
+							                          </li>
+							                          <li><a href="#">Settings 2</a>
+							                          </li>
+							                        </ul>
+							                      </li>
+							                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+							                      </li>
+							                    </ul>
+							                    <div class="clearfix"></div>
+							                  </div>
+
+                    <div class="table-responsive">
+                    	
+	                        <table id="example" class="jambo_table display" width="100%">
+	                        	<thead>
+	                        		<tr class="headings">
+	                        			<th class="column-title">Order History</th>
+	                        			<th class="column-title">Qty</th>
+	                        			<th>Item Number</th>
+	                        			<th>NDC</th>
+	                        			<th>Description</th>
+	                        			<th>Purchase Point</th>
+	                        			<th>WAC</th>
+	                        			<th>340B</th>
+	                        			<th>GPO</th>
+	                        			<th>340B Purchase Units Available</th>
+	                        			<th>GPO Purchase Units Available</th>
+	                        			<th>Is MPB</th>
+	                        			<th>EDI Orderable</th>
+	                        		</tr>
+	                        	</thead>
+	                        </table>
+                    </div>		</br>				
+                    <div class="clearfix"></div>	                  
+							                  <div class="x_content">
+
+							                  </div>
+							                </div>
+							              </div>	                      	
+	                      </div>
+	                      
+	                      <div id="step-3">
+	                        <h2 class="StepTitle">Step 3 Content</h2>
+	                        <p>
+	                          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+	                          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                        </p>
+	                        <p>
+	                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+	                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                        </p>
+	                      </div>
+	                      <div id="step-4">
+	                        <h2 class="StepTitle">Step 4 Content</h2>
+	                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                        </p>
+	                        <p>
+	                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+	                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                        </p>
+	                        <p>
+	                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+	                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                        </p>
+	                      </div>
+
+	                    </div>
+	                    <!-- End SmartWizard Content -->
+	                  </div>
+	                </div>
+	             </div>
+	          	</div>
 	          </div>
 	        </div>
 			<!-- /page content -->
@@ -93,12 +335,71 @@
 
 		<script>    
 
+	   /* SMART WIZARD */
+		
+		function init_SmartWizard() {
+			
+			if( typeof ($.fn.smartWizard) === 'undefined'){ return; }
+			console.log('init_SmartWizard');
+			
+			$('#wizard').smartWizard();
 
+			$('#wizard_verticle').smartWizard({
+			  transitionEffect: 'slide'
+			});
 
+			$('.buttonNext').addClass('btn btn-success').on('click', function(){ 
+						//alert('Next button click');
+						form.submit();});
+			$('.buttonPrevious').addClass('btn btn-primary');
+			$('.buttonFinish').addClass('btn btn-default');
+			
+		};
+
+			$('.btn-group .btn').on('click', function() { // On the click event for each button
+			  $(this) // get the button being clicked
+			    .addClass('btn-primary') // add the `btn-primary` class
+			    .siblings('.btn-primary') // get all sibling buttons which may already be selected
+			    .addClass('btn-default')
+			    .removeClass('btn-primary'); // remove the selected class
+			});
+
+		var dataSet = [
+		    [ 0, "12", "1146174", "00573017920", "ADVIL CHILD GRAPE 24 BOTTLE", "24.00","$0.00","$0.00","$0.14","20","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 1, "1", "1381128", "00138112850", " LIQGEL 200MG 20 BOTTLE", "4.00","$0.00","$0.00","$0.14","3","15","N","No" ],
+		    [ 1, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ]
+		    ];
+		 
+		$(document).ready(function() {
+		    $('#example').DataTable( {
+		        data: dataSet		       
+		    } );
+		} );
 
 			$(document).ready(function(){ 
 			    $("#sidebar_menu").load("../components/sidebar/sidebar.html");
 			    $("#top-nav").load("../components/topnavigation/topnav.html");
+			    //$('#example').DataTable();
+			    //$('datatable-checkbox').DataTable();
+			    init_SmartWizard();
+
+
+				var $datatable = $('#datatable-checkbox');
+
+				$datatable.dataTable({
+				  'order': [[ 1, 'asc' ]],
+				  'columnDefs': [
+					{ orderable: false, targets: [0] }
+				  ]
+				});
+				$datatable.on('draw.dt', function() {
+				  $('checkbox input').iCheck({
+					checkboxClass: 'icheckbox_flat-green'
+				  });
+				});
 
 			    //$("#sidebar_menu") = "Test";
 			    //alert($("#sidebar_menu"));

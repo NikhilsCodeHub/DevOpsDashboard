@@ -6,3 +6,8 @@
 # cd C:\Users\nwaishampayan\Source\Repos\DevOpsDashboard
 
 #Run gulp
+
+
+
+# Finding HTML Tags with RegExp
+href=\"([^"]*)\"

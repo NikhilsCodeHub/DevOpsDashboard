@@ -22,7 +22,9 @@
     <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
 	<!-- DataTables -->
 	<link href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
-
+    <link href="/vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+    <link href="/vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+    <link href="/vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
 
     <!-- /Global CSS -->
     
@@ -44,6 +46,10 @@
     <script src="/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
 	<!-- DataTables -->
     <script src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <!-- PNotify -->
+    <script src="/vendors/pnotify/dist/pnotify.js"></script>
+    <script src="/vendors/pnotify/dist/pnotify.buttons.js"></script>
+    <script src="/vendors/pnotify/dist/pnotify.nonblock.js"></script>    
     <!-- Custom Theme Scripts -->
 
 
@@ -104,29 +110,10 @@
 
 	              <div class="col-md-12 col-sm-12 col-xs-12">
 	                <div class="x_panel">
-	                  <div class="x_title">
-	                    <h2>Create Order  <small>Wizard</small></h2>
-	                    <ul class="nav navbar-right panel_toolbox">
-	                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-	                      </li>
-	                      <li class="dropdown">
-	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-	                        <ul class="dropdown-menu" role="menu">
-	                          <li><a href="#">Settings 1</a>
-	                          </li>
-	                          <li><a href="#">Settings 2</a>
-	                          </li>
-	                        </ul>
-	                      </li>
-	                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-	                      </li>
-	                    </ul>
-	                    <div class="clearfix"></div>
-	                  </div>
 
 	                  <div class="x_content">
 	                    <!-- Smart Wizard -->
-	                    <p>This is a basic form wizard example that inherits the colors from the selected scheme.</p>
+	                    <p>This is a basic form wizard example.</p>
 	                    <div id="wizard" class="form_wizard wizard_horizontal">
 	                      <ul class="wizard_steps">
 	                        <li>
@@ -232,87 +219,167 @@
 	                      </div>
 	                       
 	                      <div id="step-2">
-
+	                      	<!-- Begin Panel -->
 							<div class="col-md-12 col-sm-12 col-xs-12">
-							                <div class="x_panel">
-							                  <div class="x_title">
+							  <div class="x_panel">
+							    <div class="x_title">
+							      <h4>Selected Items</h4>
+							      <div class="clearfix"></div>
+							    </div>
+							    <div class="x_content">
+									<table id="tbl_orderset" class="jambo_table table-striped table-bordered dt-responsive nowrap" width="100%">
+										<thead>
+											<tr class="headings">
+												<th>Order History</th>
+												<th>Qty</th>
+												<th>Item Number</th>
+												<th>NDC</th>
+												<th>Description</th>
+												<th>Purchase Point</th>
+												<th>WAC</th>
+												<th>340B</th>
+												<th>GPO</th>
+											</tr>
+										</thead>
+									</table>
+									<div class="clearfix"></div>							      
+							    </div>
+							  </div>
+							</div>
+							<!-- End Panel -->
 
-							                    <h2>Drug Lookup</h2>
-
-							                    <h2>Item Search</h2>
-
-							                    <ul class="nav navbar-right panel_toolbox">
-							                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-							                      </li>
-							                      <li class="dropdown">
-							                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-							                        <ul class="dropdown-menu" role="menu">
-							                          <li><a href="#">Settings 1</a>
-							                          </li>
-							                          <li><a href="#">Settings 2</a>
-							                          </li>
-							                        </ul>
-							                      </li>
-							                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-							                      </li>
-							                    </ul>
-							                    <div class="clearfix"></div>
-							                  </div>
-
-                    <div class="table-responsive">
-                    	
-	                        <table id="example" class="jambo_table display" width="100%">
-	                        	<thead>
-	                        		<tr class="headings">
-	                        			<th class="column-title">Order History</th>
-	                        			<th class="column-title">Qty</th>
-	                        			<th>Item Number</th>
-	                        			<th>NDC</th>
-	                        			<th>Description</th>
-	                        			<th>Purchase Point</th>
-	                        			<th>WAC</th>
-	                        			<th>340B</th>
-	                        			<th>GPO</th>
-	                        			<th>340B Purchase Units Available</th>
-	                        			<th>GPO Purchase Units Available</th>
-	                        			<th>Is MPB</th>
-	                        			<th>EDI Orderable</th>
-	                        		</tr>
-	                        	</thead>
-	                        </table>
-                    </div>		</br>				
-                    <div class="clearfix"></div>	                  
-							                  <div class="x_content">
-
-							                  </div>
-							                </div>
-							              </div>	                      	
+	                      	<!-- Begin Panel -->
+							<div class="col-md-12 col-sm-12 col-xs-12">
+							  <div class="x_panel">
+							    <div class="x_title">
+							      <h4>Drug Selection</h4>
+							      <div class="clearfix"></div>
+							    </div>
+							    <div class="x_content">
+							    	<form class="form-horizontal form-label-left input_mask">
+										<div class="form-group">
+											<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Search by NDC or Drug name :
+											</label>
+											<div class="col-md-4 col-sm-4 col-xs-12">
+											  <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+											</div>
+											<button type="button" class="btn btn-success">Search</button>
+										</div>
+									</form>
+									<table id="tbl_drugsearch" class="jambo_table table-striped table-bordered dt-responsive nowrap" width="100%">
+										<thead>
+											<tr class="headings">
+												<th>Order History</th>
+												<th>Qty</th>
+												<th>Item Number</th>
+												<th>NDC</th>
+												<th>Description</th>
+												<th>Purchase Point</th>
+												<th>WAC</th>
+												<th>340B</th>
+												<th>GPO</th>
+												<th>340B Units </th>
+												<th>GPO Units </th>
+												<th>Is MPB</th>
+												<th>EDI Orderable</th>
+											</tr>
+										</thead>
+									</table>							      
+							    </div>
+							  </div>
+							</div>
+							<!-- End Panel -->
+                  	
 	                      </div>
 	                      
 	                      <div id="step-3">
-	                        <h2 class="StepTitle">Step 3 Content</h2>
-	                        <p>
-	                          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-	                          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	                        </p>
-	                        <p>
-	                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-	                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	                        </p>
+
+	                      	<!-- Begin Panel -->
+							<div class="col-md-12 col-sm-12 col-xs-12">
+							  <div class="x_panel">
+							    <div class="x_title">
+							      <h4>Split Order</h4>
+							      <div class="clearfix"></div>
+							    </div>
+							    <div class="x_content">
+
+									<table id="tbl_splitorder" class="jambo_table table-striped table-bordered dt-responsive nowrap" width="100%">
+										<thead>
+											<tr class="headings">
+												<th>Order History</th>
+												<th>Qty</th>
+												<th>Item Number</th>
+												<th>NDC</th>
+												<th>Description</th>
+												<th>Purchase Point</th>
+												<th>WAC</th>
+												<th>340B</th>
+												<th>GPO</th>
+											</tr>
+										</thead>
+									</table>							      
+							    </div>
+							  </div>
+							</div>
+
+							<!-- End Panel -->
+							<div class="form-group col-md-offset-3">
+								<button type="button" class="btn  btn-primary source" onclick="new PNotify({
+				                                  title: 'Favorites',
+				                                  text: 'Item(s) were added to Favorites !',
+				                                  type: 'info',
+				                                  styling: 'bootstrap3'
+				                              });">Add To Favs</button>
+								<button type="button" class="btn btn-primary source" onclick="new PNotify({
+				                                  title: 'Saved For Later',
+				                                  text: 'Item(s) was moved to Saved Order List',
+				                                  type: 'info',
+				                                  styling: 'bootstrap3'
+				                              });">Save Item(s) for Later</button>
+								<button type="button" class="btn btn-primary">Find Item(s) on Hand</button>
+				                <button type="button" class="btn  btn-success source" onclick="new PNotify({
+				                                  title: 'Order Split',
+				                                  text: 'Order was split successfully !',
+				                                  type: 'success',
+				                                  styling: 'bootstrap3'
+				                              });">&nbsp;&nbsp;Split Order(s)&nbsp;&nbsp;</button>								
+								<button type="button" class="btn btn-danger" >Delete Selected Items</button>
+								<button type="button" class="btn btn-danger">Delete Order</button>
+							</div>
+
 	                      </div>
 	                      <div id="step-4">
-	                        <h2 class="StepTitle">Step 4 Content</h2>
-	                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	                        </p>
-	                        <p>
-	                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-	                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	                        </p>
-	                        <p>
-	                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-	                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	                        </p>
+	                        <h2 class="StepTitle">Confirmation</h2>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="x_panel">
+
+
+								<div class="table-responsive">
+
+									<table id="tbl_orderconfirm" class="jambo_table display" width="100%">
+										<thead>
+											<tr class="headings">
+												<th class="column-title">Order History</th>
+												<th class="column-title">Qty</th>
+												<th>Item Number</th>
+												<th>NDC</th>
+												<th>Description</th>
+												<th>Purchase Point</th>
+												<th>WAC</th>
+												<th>340B</th>
+												<th>GPO</th>
+												<th>340B Purchase Units Available</th>
+												<th>GPO Purchase Units Available</th>
+												<th>Is MPB</th>
+												<th>EDI Orderable</th>
+											</tr>
+										</thead>
+									</table>
+								</div>		
+								</br>				
+								<div class="clearfix"></div>	                  
+			                </div>
+			              	</div>
 	                      </div>
 
 	                    </div>
@@ -339,8 +406,9 @@
 
 		<script>    
 
+		PNotify.prototype.options.delay ? (function() {PNotify.prototype.options.delay = 3000;}()) : (alert('Timer is already at zero.'));
+
 	   /* SMART WIZARD */
-		
 		function init_SmartWizard() {
 			
 			if( typeof ($.fn.smartWizard) === 'undefined'){ return; }
@@ -352,11 +420,11 @@
 			  transitionEffect: 'slide'
 			});
 
-			$('.buttonNext').addClass('btn btn-success').on('click', function(){ 
+			$('.buttonNext').addClass('btn btn-primary');
+			$('.buttonPrevious').addClass('btn btn-primary');
+			$('.buttonFinish').addClass('btn btn-success').on('click', function(){ 
 						//alert('Next button click');
 						form.submit();});
-			$('.buttonPrevious').addClass('btn btn-primary');
-			$('.buttonFinish').addClass('btn btn-default');
 			
 		};
 
@@ -368,20 +436,95 @@
 			    .removeClass('btn-primary'); // remove the selected class
 			});
 
-		var dataSet = [
+		var data_selectedSet = [
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
 		    [ 0, "12", "1146174", "00573017920", "ADVIL CHILD GRAPE 24 BOTTLE", "24.00","$0.00","$0.00","$0.14","20","5","N","No" ],
 		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
 		    [ 1, "1", "1381128", "00138112850", " LIQGEL 200MG 20 BOTTLE", "4.00","$0.00","$0.00","$0.14","3","15","N","No" ],
 		    [ 1, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
 		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
-		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ]
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ]		    		    
 		    ];
+
+		var data_SearchSet = [
+		    [ 0, "12", "1146174", "00573017920", "ADVIL CHILD GRAPE 24 BOTTLE", "24.00","$0.00","$0.00","$0.14","20","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "GasX BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 1, "1", "1381128", "00138112850", " GasX 200MG 20 BOTTLE", "4.00","$0.00","$0.00","$0.14","3","15","N","No" ],
+		    [ 1, "1", "321234", "005234231450", "Tylenol BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "Tylenol Pills 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "12", "1146174", "00573017920", "ADVIL CHILD GRAPE 24 BOTTLE", "24.00","$0.00","$0.00","$0.14","20","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 1, "1", "1381128", "00138112850", " LIQGEL 200MG 20 BOTTLE", "4.00","$0.00","$0.00","$0.14","3","15","N","No" ],
+		    [ 1, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "Tylenol BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "12", "1146174", "00573017920", "Claritin CHILD GRAPE 24 BOTTLE", "24.00","$0.00","$0.00","$0.14","20","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 1, "1", "1381128", "00138112850", " LIQGEL 200MG 20 BOTTLE", "4.00","$0.00","$0.00","$0.14","3","15","N","No" ],
+		    [ 1, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "Tylenol BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "12", "1146174", "00573017920", "Claritin CHILD GRAPE 24 BOTTLE", "24.00","$0.00","$0.00","$0.14","20","5","N","No" ],		    
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 1, "1", "1381128", "00138112850", " LIQGEL 200MG 20 BOTTLE", "4.00","$0.00","$0.00","$0.14","3","15","N","No" ],
+		    [ 1, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "Zertec BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],		    
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "Zertec Pills 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "12", "1146174", "00573017920", "ADVIL CHILD GRAPE 24 BOTTLE", "24.00","$0.00","$0.00","$0.14","20","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 1, "1", "1381128", "00138112850", " LIQGEL 200MG 20 BOTTLE", "4.00","$0.00","$0.00","$0.14","3","15","N","No" ],
+		    [ 1, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "Zertec BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ],
+		    [ 0, "1", "321234", "005234231450", "ADVIL BOTTLE 1 X 24.000 EACH", "4.00","$0.00","$0.00","$0.14","23","5","N","No" ]		    		    
+		    ];		    
 		 
 		$(document).ready(function() {
-		    $('#example').DataTable( {
-		        data: dataSet		       
+		    $('#tbl_orderset').DataTable( {
+		        data: data_selectedSet,
+		        "columnDefs": [
+		            {
+		                "targets": [ 0 ],
+		                "visible": false
+		            }	       
+		            ]
+		    } );
+		    $('#tbl_drugsearch').DataTable( {
+		    	"columnDefs": [
+		            {
+		                "targets": [ 0 ],
+		                "visible": false,
+		                "searchable": false
+		            },
+		            {
+		                "targets": [ 10,11,12 ],
+		                "visible": false
+		            }
+		        ],
+		        data: data_SearchSet		       
+		    } );
+		    $('#tbl_splitorder').DataTable( {
+		        data: data_selectedSet,
+		       	"columnDefs": [
+		            {
+		                "targets": [ 0 ],
+		                "visible": false
+		            }	       
+		            ]
+		    } );
+		    $('#tbl_orderconfirm').DataTable( {
+		        data: data_selectedSet,
+		       	"columnDefs": [
+		            {
+		                "targets": [ 0 ],
+		                "visible": false
+		            }	       
+		            ]
 		    } );
 		} );
+
+
 
 			$(document).ready(function(){ 
 			    $("#sidebar_menu").load("../components/sidebar/sidebar.html");
@@ -391,19 +534,19 @@
 			    init_SmartWizard();
 
 
-				var $datatable = $('#datatable-checkbox');
+				// var $datatable = $('#datatable-checkbox');
 
-				$datatable.dataTable({
-				  'order': [[ 1, 'asc' ]],
-				  'columnDefs': [
-					{ orderable: false, targets: [0] }
-				  ]
-				});
-				$datatable.on('draw.dt', function() {
-				  $('checkbox input').iCheck({
-					checkboxClass: 'icheckbox_flat-green'
-				  });
-				});
+				// $datatable.dataTable({
+				//   'order': [[ 1, 'asc' ]],
+				//   'columnDefs': [
+				// 	{ orderable: false, targets: [0] }
+				//   ]
+				// });
+				// $datatable.on('draw.dt', function() {
+				//   $('checkbox input').iCheck({
+				// 	checkboxClass: 'icheckbox_flat-green'
+				//   });
+				// });
 
 			    //$("#sidebar_menu") = "Test";
 			    //alert($("#sidebar_menu"));

@@ -7,24 +7,491 @@
     
   <body>
 
-      <input type="button" id="btn1" onclick="clicked();" />
+      <input type="button" onclick="clicked();" />
     
-  	<div id="sidebar_menu"> Weather</div>
+  	<div> Weather</div>
 
-		<script lang="javascript">
-//			$(document).ready(function(){
-//			    $("#sidebar_menu").load("test2.html");
-//			    //$("#sidebar_menu") = "Test";
-//			    alert($("#sidebar_menu"));
-//			});
-			 
-            function clicked()
-            {
-                alert("i was clicked");
-                $("#sidebar_menu").load("test2.html");
-                
-            }
-			//$("#sidebar_menu").load("../components/sidebar/sidebar.html");
-		</script>
+<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="x_panel">
+    <div class="x_title">
+      <h2>Pharmacy 4</h2>
+      <ul class="nav navbar-right panel_toolbox">
+        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Settings 1</a></li>
+            <li><a href="#">Settings 2</a></li>
+          </ul>
+        </li>
+        <li><a class="close-link"><i class="fa fa-close"></i></a></li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+      
+    </div>
+  </div>
+</div>
+
+
+
+<table class="rgMasterTable rg" style="width:100%;table-layout:auto;empty-cells:show;">
+  <colgroup>
+    <col style="width:65px">
+    <col style="width:80px">
+    <col style="width:100px">
+    <col style="width:200px">
+    <col style="width:200px">
+    <col style="width:200px">
+    <col style="width:80px">
+    <col style="width:80px">
+    <col style="width:80px">
+    <col style="width:80px">
+    <col style="width:100px">
+    <col style="width:100px">
+    <col style="width:80px">
+    <col style="display:none;">
+    <col>
+    <col>
+  </colgroup>
+<thead>
+    <tr>
+      <th scope="col" class="rgHeader" title="Drag to resize" style="cursor: e-resize;">Add Qty</th><th scope="col" class="rgHeader" title="Drag to group or reorder" style="cursor: move;"><a title="Click here to sort" >Item Number</a></th><th scope="col" class="rgHeader" title="Drag to group or reorder" style="cursor: move;"><a title="Click here to sort" >NDC</a></th><th scope="col" class="rgHeader" title="Drag to group or reorder" style="cursor: move;"><a title="Click here to sort" >Description</a></th><th scope="col" class="rgHeader" title="Drag to group or reorder" style="cursor: move;"><a title="Click here to sort" >Generic Name</a></th><th scope="col" class="rgHeader" title="Drag to group or reorder" style="cursor: move;"><a title="Click here to sort" >Mfg</a></th><th scope="col" class="rgHeader"><a title="Click here to sort" >Qty/ Pack</a></th><th scope="col" title="Drag to group or reorder" class="rgHeader" style="cursor: move;"><a title="Aquisition Cost" >WAC</a></th><th scope="col" class="rgHeader"><a title="Click here to sort" >340B</a></th><th scope="col" class="rgHeader" title="Drag to group or reorder" style="cursor: move;"><a title="Click here to sort" >GPO</a></th><th scope="col" title="Drag to group or reorder" class="rgHeader" style="cursor: move;"><a title="Quantity Available in 340B Virtual Inventory" >340B Purchase Units Available</a></th><th scope="col" title="Drag to group or reorder" class="rgHeader" style="cursor: move;"><a title="Quantity Available in GPO Virtual Inventory" >GPO Purchase Units Available</a></th><th scope="col" title="Package savings comparing WAC and 340B" class="rgHeader"><a title="Package savings comparing WAC and 340B" >Svngs Pkg</a></th><th scope="col" class="rgHeader" style="display:none;"><a title="Click here to sort" >DEA Code</a></th><th scope="col" class="rgHeader"><a title="Click here to sort" >Is MPB</a></th><th scope="col" class="rgHeader" title="Drag to group or reorder" style="cursor: move;"><a title="Click here to sort" >EDI Orderable</a></th>
+    </tr>
+  </thead><tfoot>
+    <tr class="rgCommandRow">
+      <td class="rgCommandCell" colspan="15"><table class="rgCommandTable" summary="Command item for additional functionalities for the grid like adding a new record and exporting." style="width:100%;">
+        <caption>
+          <span style="display: none">Command item</span>
+        </caption><thead>
+          <tr>
+            <th scope="col">Command item</th>
+          </tr>
+        </thead><tbody>
+          <tr>
+            <td align="left">&nbsp;</td><td align="right">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<input type="button"  value=" " title="Export to PDF" class="rgExpPDF">&nbsp;&nbsp;</td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr><tr class="rgPager">
+      <td colspan="15"><table summary="Data pager which controls on which page is the RadGrid control." style="width:100%;border-spacing:0;">
+        <caption>
+          <span style="display: none">Data pager</span>
+        </caption><thead>
+          <tr>
+            <th scope="col">Data pager</th>
+          </tr>
+        </thead><tbody>
+          <tr>
+            <td class="rgPagerCell NextPrevAndNumeric"><div class="rgWrap rgArrPart1">
+              <input type="button"  value=" " title="First Page" class="rgPageFirst"><input type="button"  value=" " title="Previous Page" class="rgPagePrev">
+            </div><div class="rgWrap rgNumPart">
+              <a class="rgCurrentPage" ><span>1</span></a><a ><span>2</span></a><a ><span>3</span></a>
+            </div><div class="rgWrap rgArrPart2">
+              <input type="button"  value=" " title="Next Page" class="rgPageNext"><input type="button"  value=" " title="Last Page" class="rgPageLast">
+            </div><div class="rgWrap rgAdvPart">
+              <span class="rgPagerLabel">Page size:</span><div class="RadComboBox RadComboBox_Office2010Blue" style="width:46px;white-space:normal;">
+                <table summary="Page Size Drop Down Control" style="border-width:0;border-collapse:collapse;width:100%">
+                  <caption style="display: none;">
+                    PageSizeComboBox
+                  </caption><tbody><tr class="rcbReadOnly">
+                    <td class="rcbInputCell rcbInputCellLeft" style="width:100%;"><input  type="text" class="rcbInput radPreventDecorate" value="20" readonly="readonly" autocomplete="off"></td><td class="rcbArrowCell rcbArrowCellRight"><a style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
+                  </tr>
+                </tbody></table><div class="rcbSlide" style="z-index:6000;display:none;"><div class="RadComboBoxDropDown RadComboBoxDropDown_Office2010Blue "><div class="rcbScroll rcbWidth"><ul class="rcbList"><li class="rcbItem">10</li><li class="rcbItem">20</li><li class="rcbItem">50</li></ul></div></div></div><input  type="hidden" autocomplete="off">
+              </div>
+            </div><div class="rgWrap rgInfoPart">
+               &nbsp;<strong>56</strong> items in <strong>3</strong> pages
+            </div></td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+  </tfoot><tbody>
+  <tr class="rgRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1103837</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573018810</a>
+                  </td><td>ADVIL CAPL ALLERGY SIN 20  BLIST PACK 1 X 20.000 EACH</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">CHLORPHEN/PSEUDOEPH/IBUPROFEN</a> 
+                  </td><td>PFIZER CON.HLHCR. PSE</td><td>20.000</td><td>$0.00</td><td>$0.00</td><td>$0.48</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgAltRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1146174</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573017920</a>
+                  </td><td>ADVIL CHILD JR CHEW GRAPE 24  BOTTLE 1 X 24.000 EACH</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN</a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>24.000</td><td>$0.00</td><td>$0.00</td><td>$0.14</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1207380</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573017030</a>
+                  </td><td>ADVIL SUSP CHILD FRUIT 4OZ  BOTTLE 1 X 120.000 MLS</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN</a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>120.000</td><td>$0.00</td><td>$0.00</td><td>$0.04</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgAltRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1279256</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573016820</a>
+                  </td><td>ADVIL MIGRAINE LIQGEL 200MG 20  BOTTLE 1 X 20.000 EACH</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN</a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>20.000</td><td>$0.00</td><td>$0.00</td><td>$0.16</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1280858</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573019120</a>
+                  </td><td>ADVIL DROP INF W/GRP D/F 0.5OZ  DROP BTL 1 X 15.000 MLS</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN</a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>15.000</td><td>$0.00</td><td>$0.00</td><td>$0.23</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgAltRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1287002</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573016911</a>
+                  </td><td>ADVIL LIQGEL 120  BOTTLE     1 X 0.000 EA</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN CAP 200 MG          </a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>120.000</td><td>$0.00</td><td>$0.00</td><td>$0.10</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">&nbsp;</td><td>N</td><td> </td>
+  </tr><tr class="rgRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1299122</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573016830</a>
+                  </td><td>ADVIL MIGRAINE LIQGEL 200MG 40  BOTTLE 1 X 40.000 EACH</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN</a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>40.000</td><td>$0.00</td><td>$0.00</td><td>$0.14</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgAltRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1377738</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573016940</a>
+                  </td><td>ADVIL LIQGEL 200MG 80  BOTTLE 1 X 80.000 EACH</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN</a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>80.000</td><td>$0.00</td><td>$0.00</td><td>$0.10</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1379957</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573016930</a>
+                  </td><td>ADVIL LIQGEL 200MG 40  BOTTLE 1 X 40.000 EACH</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN</a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>40.000</td><td>$0.00</td><td>$0.00</td><td>$0.14</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgAltRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1381128</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573016920</a>
+                  </td><td>ADVIL LIQGEL 200MG 20  BOTTLE 1 X 20.000 EACH</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN</a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>20.000</td><td>$0.00</td><td>$0.00</td><td>$0.16</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1405414</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573016135</a>
+                  </td><td>ADVIL CAPL 150  BOTTLE     1 X 0.000 EA</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN TAB 200 MG          </a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>150.000</td><td>$0.00</td><td>$0.00</td><td>$0.08</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">&nbsp;</td><td>N</td><td> </td>
+  </tr><tr class="rgAltRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1406859</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573015435</a>
+                  </td><td>ADVIL TAB 150  BOTTLE     1 X 0.000 EA</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN TAB 200 MG          </a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>150.000</td><td>$0.00</td><td>$0.00</td><td>$0.08</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">&nbsp;</td><td>N</td><td> </td>
+  </tr><tr class="rgRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1407576</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573016651</a>
+                  </td><td>ADVIL GELCAPL 200  BOTTLE     1 X 0.000 EA</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN TAB 200 MG          </a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>200.000</td><td>$0.00</td><td>$0.00</td><td>$0.08</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">&nbsp;</td><td>N</td><td> </td>
+  </tr><tr class="rgAltRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1408723</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573016151</a>
+                  </td><td>ADVIL CAPL 200  BOTTLE 1 X 200.000 EACH</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN</a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>200.000</td><td>$0.00</td><td>$0.00</td><td>$0.08</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1414457</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573016440</a>
+                  </td><td>ADVIL PM CAPL 80  BOTTLE 1 X 80.000 EACH</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN/DIPHENHYDRAMINE CIT</a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>80.000</td><td>$0.00</td><td>$0.00</td><td>$0.11</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgAltRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1436526</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573016430</a>
+                  </td><td>ADVIL PM CAPL 40  BOTTLE 1 X 40.000 EACH</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN/DIPHENHYDRAMINE CIT</a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>40.000</td><td>$0.00</td><td>$0.00</td><td>$0.14</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1438027</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573015475</a>
+                  </td><td>ADVIL TAB 200  BOTTLE 1 X 200.000 EACH</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN</a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>200.000</td><td>$0.00</td><td>$0.00</td><td>$0.08</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgAltRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1460013</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00001460013</a>
+                  </td><td>LDS ADVIL TAB M-DSE 4S CT6    X  </td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;"></a> 
+                  </td><td>LIL DRUG STORE PRODUCTS</td><td>100000.000</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1645431</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00001645431</a>
+                  </td><td>ADVIL TAB DISPENSER 2X50    X  </td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;"></a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>100000.000</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">0</td><td>N</td><td> </td>
+  </tr><tr class="rgAltRow">
+    <td>
+                    <div >
+      
+                      <div style="overflow:hidden;width:80px;">
+                        <div style="float:left;">
+                          <span class="riSingle RadInput RadInput_CustomInputSkin" style="width:30px;"><input  size="20" class="riTextBox riEnabled" type="text" value=""><input  type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        </div>
+                        <div style="overflow:hidden;margin-top:3px">
+                          <input type="image"  title="Add this item to your order" src="../images/plus.png">
+                        </div>
+                      </div>
+                    
+    </div>
+                  </td><td>1677020</td><td>
+                    <a  target="_blank" style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">00573016710</a>
+                  </td><td>ADVIL PM LIQGEL 16  BOTTLE     1 X 0.000 EA</td><td>
+                    <a  style="color:Black;background-color:Transparent;font-family:Verdana,Arial;font-size:8pt;font-weight:normal;font-style:normal;">IBUPROFEN-DIPHENHYDRAMINE HCL </a> 
+                  </td><td>PFIZER CONSUMER HEALTHCAR</td><td>16.000</td><td>$0.00</td><td>$0.00</td><td>$0.23</td><td>0.000</td><td>0.000</td><td>$0.00</td><td style="display:none;">&nbsp;</td><td>N</td><td> </td>
+  </tr>
+  </tbody>
+
+</table>
+
       </body>
 </html>  	    

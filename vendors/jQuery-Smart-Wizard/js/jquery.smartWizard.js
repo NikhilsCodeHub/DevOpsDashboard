@@ -52,9 +52,9 @@ function SmartWizard(target, options) {
         $this.elmStepContainer.append(allDivs);
         elmActionBar.append($this.loader);
         $this.target.append($this.elmStepContainer);
-        elmActionBar.append($this.buttons.finish)
-                    .append($this.buttons.next)
-                    .append($this.buttons.previous);
+        elmActionBar.append($this.buttons.next)
+                    .append($this.buttons.previous)
+                    .append($this.buttons.finish);
         $this.target.append(elmActionBar);
         this.contentWidth = $this.elmStepContainer.width();
 
@@ -387,8 +387,8 @@ function SmartWizard(target, options) {
         });
 
         // These values (5 and 20) are experimentally chosen.
-        stepContainer.height(height + 5);
-        this.elmStepContainer.height(height + 20);
+        stepContainer.height(height + 50);
+        this.elmStepContainer.height(height + 50);
     }
 
     _init(this);

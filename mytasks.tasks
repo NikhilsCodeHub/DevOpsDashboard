@@ -1,0 +1,22 @@
+Project Work :
+    FTP Analytics :
+        Data Storing :
+
+            ☐ 1. Write Script to Parse FTP Logs loooking for keywords DOWNLOAD and UPLOAD.
+                ☐ Identify the connection ID.
+                ☐ retrieve all log lines for the connection ID.
+            ☐ 2. Generate JSON Document for each connection ID.
+                ☐ Identify Date Time, Connection ID, Client UserID, File Name, File Path, File Type, File Size
+            ☐ 3. Import JSON into MongoDb or AzureDB
+            ☐ 4. Keep pointer of the Line last evaluated
+            ☐ 5. Parse as soon as the file changes or every 5 mins
+
+        Data Retrieval :
+
+            ☐ 1. Write Node service to retrieve JSON dataset based on filter criteria
+                ☐ a. Filter Criteria : Date Range, File Type, Client Type, File Size
+        
+        Presentation :
+            ☐ Identify Chart dataset requirements.
+            ☐ Match the char dataset req to the Node Service output.
+            ☐ Refresh Chart to rebind Dataset.

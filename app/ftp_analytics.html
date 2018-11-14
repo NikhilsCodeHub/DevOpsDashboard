@@ -692,6 +692,8 @@
    
 		}
 
+
+
 	function gd(year, month, day) {
 		return new Date(year, month - 1, day).getTime();
 	}			
@@ -701,7 +703,7 @@
 		if( typeof ($.plot) === 'undefined'){ return; }
 		
 		console.log('init_flot_chart');
-
+		console.log(gd(2012, 1, 1));
 
 		var arr_data1 = [
 			[gd(2012, 1, 1), 17],
@@ -754,7 +756,7 @@
             tickColor: "rgba(51, 51, 51, 0.06)",
             mode: "time",
             tickSize: [1, "day"],
-            //tickLength: 10,
+            tickLength: 10,
             axisLabel: "Date",
             axisLabelUseCanvas: true,
             axisLabelFontSizePixels: 12,

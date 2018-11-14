@@ -12,7 +12,7 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: './'
         },
-        startPath: 'app/index.html'
+        startPath: 'app/ftp_analytics.html'
     });
 });
 

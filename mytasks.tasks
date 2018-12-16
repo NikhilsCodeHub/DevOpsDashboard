@@ -3,13 +3,16 @@ Project Work :
         Data Storing :
 
             ☐ 1. Write Script to Parse FTP Logs loooking for keywords DOWNLOAD and UPLOAD.
-                ☐ Identify the connection ID.
-                ☐ retrieve all log lines for the connection ID.
+                ☐ Identify the connection ID. @est(1d)
+                ☐ retrieve all log lines for the connection ID. @est(1d)
             ☐ 2. Generate JSON Document for each connection ID.
-                ☐ Identify Date Time, Connection ID, Client UserID, File Name, File Path, File Type, File Size
-            ☐ 3. Import JSON into MongoDb or AzureDB
-            ☐ 4. Keep pointer of the Line last evaluated
-            ☐ 5. Parse as soon as the file changes or every 5 mins
+                ☐ Identify Date Time, Connection ID, Client UserID, File Name, File Path, File Type, File Size @est(1d)
+            ☐ 3. Import JSON into MongoDb or AzureDB @est(1d)
+            ☐ 4. Keep pointer of the Line last evaluated 
+            ☐ 5. Parse as soon as the file changes or every 5 mins. @est(1d)
+            ☐ this is test
+            □ This is Test 2.
+            □ Test3.
 
         Data Retrieval :
 

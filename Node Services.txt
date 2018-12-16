@@ -1,0 +1,10 @@
+Node Services
+
+
+FTP Analytics
+- Parse and extract content from FTP Log files
+- insert into MongoDB or AzureDB
+
+- Develop service and route for 
+	- Reading data based on parameters
+	
